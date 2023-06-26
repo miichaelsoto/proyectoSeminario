@@ -1,0 +1,92 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" >
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+   <title>Nuevo Cliente</title>
+</head>
+<body>
+    <div class="container">
+        <header>Ingreso NUEVO Cliente</header>
+
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Datos del cliente</span>
+
+                    <div class="fields">
+                        <div class="input-field1" >
+                            <label>Nombre y Apellido</label>
+                            <input type="text" name="nombre" placeholder="Nombre" [(ngModel)]="cliente.nombre" required>
+                        </div>
+
+                        <div class="input-field1" >
+                            <label>Empresa</label>
+                            <input type="text" name="empresa" placeholder="Empresa" [(ngModel)]="cliente.empresa" required>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    <span class="title">Datos de ubicación</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Pais</label>
+                            <input type="text" name="pais" placeholder="Pais"  [(ngModel)]="ubicacion.pais" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Departamento</label>
+                            <input type="text" name="departamento" placeholder="Departamento" [(ngModel)]="ubicacion.departamento" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Municipio</label>
+                            <input type="text" name="municipio" placeholder="Municipio" [(ngModel)]="ubicacion.municipio" required>
+                        </div>
+
+                        <div class="input-field1">
+                            <label>Direccion</label>
+                            <input type="text" name="direccion" placeholder="Direccion" [(ngModel)]="ubicacion.direccion" required>
+                        </div>
+                        <div class="input-field1">
+                          <label>Coordenadas</label>
+                          <input type="text" name="coordenadas" placeholder="Coordenadas" [(ngModel)]="ubicacion.coordenadas" required>
+                      </div>
+
+                    <!--Boton-->
+                        <div class="boton-modal">
+                          <label for="btn-modal" (click)="registrarCli();">
+                              Guardar
+                          </label>
+                      </div>
+                    <!--Fin de Boton-->
+                    <!--Ventana Modal-->
+                      <input type="checkbox" id="btn-modal">
+                      <div class="container-modal">
+                          <div class="content-modal">
+                              <h2>SKYNET S.A</h2>
+                              <p>Cliente Guardado</p>
+                              <div class="btn-cerrar">
+                                  <label for="btn-modal" (click)="registrarUbi();">Aceptar</label>
+                              </div>
+                          </div>
+                          <label for="btn-modal" class="cerrar-modal"></label>
+                      </div>
+                    <!--Fin de Ventana Modal-->
+
+
+                </div>
+            </div>
+          </div>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" >
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+   <title>PLANEAR visita</title>
+</head>
+<body>
+    <div class="container" >
+        <header>Planear visita de soporte # </header>  <header [(ngModel)]="idSoporte" > </header>
+
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Datos del cliente</span>
+
+                    <div class="fields">
+                        <div class="input-field1" >
+                            <label>Nombre y Apellido</label>
+                            <input type="text" name="nombre" placeholder="Nombre"  required>
+                        </div>
+
+                        <div class="input-field1" >
+                            <label>Empresa</label>
+                            <input type="text" name="empresa" placeholder="Empresa"  required>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    <span class="title">Datos de la Visita</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Fecha de inicio</label>
+                            <input type="date" name="pais" placeholder="Fecha de inicio"  [(ngModel)]="updVisita.fechaInicioSop" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Fecha de fin </label>
+                            <input type="date" name="departamento" placeholder="Fecha fin" [(ngModel)]="updVisita.fechaFinSop" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Hora inicio</label>
+                            <input type="time" name="municipio" placeholder="Hora Inicio" [(ngModel)]="updVisita.horaInicioSop" required>
+                        </div>
+
+                        <div class="input-field1">
+                            <label>Hora Fin </label>
+                            <input type="time" name="direccion" placeholder="Hora Fin" [(ngModel)]="updVisita.horaFinSop" required>
+                        </div>
+                        <div class="input-field1">
+                          <label>Tecnico asignado</label>
+                          <input type="text" name="coordenadas" placeholder="Id de tecnico asignado" [(ngModel)]="updVisita.idUsuario" required>
+                      </div>
+
+                    <!--Boton-->
+                        <div class="boton-modal">
+                          <label for="btn-modal">
+                              Modificar Visita
+                          </label>
+                      </div>
+                    <!--Fin de Boton-->
+                    <!--Ventana Modal-->
+                      <input type="checkbox" id="btn-modal">
+                      <div class="container-modal">
+                          <div class="content-modal">
+                              <h2>SKYNET S.A</h2>
+                              <p>Cliente Guardado</p>
+                              <div class="btn-cerrar">
+                                  <label for="btn-modal">Aceptar</label>
+                              </div>
+                          </div>
+                          <label for="btn-modal" class="cerrar-modal"></label>
+                      </div>
+                    <!--Fin de Ventana Modal-->
+
+
+                </div>
+            </div>
+          </div>
+        </form>
+    </div>
+
+</body>
+</html>

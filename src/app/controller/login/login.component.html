@@ -1,0 +1,27 @@
+<head>
+  <meta charset="utf-8">
+  <title>SkyNet S. A.</title>
+</head>
+<body>
+  <div class="center">
+    <h1>SkyNet S. A.</h1>
+    <form method="post">
+      <div class="txt_field">
+        <input type="text" name ="idUsuario" [(ngModel)]="usuario" required>
+        <span></span>
+        <label>Id de usuario</label>
+      </div>
+      <div class="txt_field">
+        <input type="password" name ="pwd"  [(ngModel)]="password" required>
+        <span></span>
+        <label>Contraseña</label>
+      </div>
+
+      <input type="submit" (click)="login();">
+      <div class="signup_link">
+         <a href=#></a>
+      </div>
+    </form>
+  </div>
+
+</body>

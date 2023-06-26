@@ -1,0 +1,44 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro nuevo usuario | Skynet </title>
+    <link rel="stylesheet">
+    <!-- Fontawesome CDN Link For Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  </head>
+  <body>
+    <form action="thank-you.html">
+      <h2>Nuevo usuario</h2>
+      <div class="form-group fullname">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" placeholder="Nombre" [(ngModel)]="usuario.nombre" required>
+      </div>
+      <div class="form-group fullname">
+        <label for="apellido">Apellido</label>
+        <input type="text" name="apellido" placeholder="Apellido" [(ngModel)]="usuario.apellido" required>
+      </div>
+      <div class="form-group email">
+        <label for="correo">Correo</label>
+        <input type="text" name="correo" placeholder="Correo electronico" [(ngModel)]="usuario.correo" required>
+      </div>
+      <div class="form-group password">
+        <label for="password">Password</label>
+        <input type="password" name="pwd" placeholder="Nueva Contraseña" [(ngModel)]="usuario.password" required>
+        <i id="pass-toggle-btn" class="fa-solid fa-eye"></i>
+      </div>
+      <div class="form-group gender">
+        <label for="rol">Rol</label>
+        <select name="rol" [(ngModel)]="usuario.rol">
+          <option value="" selected disabled>Seleccione el ROL</option>
+          <option value="cliente">Administrador</option>
+          <option value="tecnico">Técnico</option>
+          <option value="gerente">Supervisor</option>
+        </select>
+      </div>
+      <div class="form-group submit-btn" (click)="registrar();">
+        <input type="submit" value="Crear">
+      </div>
+    </form>
+  </body>
+</html>

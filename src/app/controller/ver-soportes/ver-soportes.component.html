@@ -1,0 +1,126 @@
+<div class="container">
+  <br><br>
+  <div class="form-control">
+      <br>
+      <input type="submit" routerLink="/nuevo-soporte" value="Ingreso NUEVO Soporte">
+      <div class="signup_link">
+
+      </div>
+      <br>
+      <br>
+        <label class="col-sm-2 h4" >Ingrese un Soporte: </label>
+        <input type="text" placeholder="id de Soporte" [(ngModel)]="idSoporteSel" required>
+        <div class="buttons">
+          <button class="btn" (click)="detSoporte();">
+            <span>Buscar</span>
+            <i class="uil uil-navigator"></i>
+        </button>
+          </div>
+
+        <br>
+    </div>
+    <div>
+      <router-outlet></router-outlet>
+      <br><br>
+      <h2>Detalles del soporte</h2>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Tipo Soporte  </th>
+            <th scope="col">Detalle</th>
+            <th scope="col">Fecha In.</th>
+            <th scope="col">Fecha Fin</th>
+            <th scope="col">Hr. In.</th>
+            <th scope="col">Hr. Fin</th>
+            <th scope="col">Solucion</th>
+            <th scope="col">Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let m of soporte">
+              <td>{{m.tipoSoporte}}</td>
+              <td>{{m.detalleSoporte}}</td>
+              <td>{{m.fechaInicioSop}}</td>
+              <td>{{m.fechaFinSop}}</td>
+              <td>{{m.horaInicioSop}}</td>
+              <td>{{m.horaFinSop}}</td>
+              <td>{{m.solucion}}</td>
+              <td>{{m.estado}}</td>
+          </tr>
+
+        </tbody>
+      </table>
+      <br><br>
+
+       <!--Boton-->
+       <div class="boton-modal">
+        <label for="btn-modal">
+            Actualizar
+        </label>
+    </div>
+  <!--Fin de Boton-->
+  <!--Ventana Modal-->
+    <input type="checkbox" id="btn-modal">
+    <div class="container-modal">
+        <div class="content-modal">
+            <h2>SKYNET S.A</h2>
+            <div class="container" >
+              <header>Actualizar visita de soporte # </header> <input type="text" placeholder="Numero soporte"  [(ngModel)]="idSoporteSel" required>
+
+              <form action="#">
+                  <div class="form first">
+
+
+                      <div class="details ID">
+                        <br>
+                           <h2>Datos de la Visita</h2>
+                          <div class="fields">
+                              <div class="input-field">
+                                  <label>Fecha de inicio:  </label>
+                                  <input type="date" name="pais" placeholder="Fecha de inicio"  [(ngModel)]="updVisita.fechaInicioSop" required>
+                              </div>
+
+                              <div class="input-field">
+                                  <label>Fecha de fin:  </label>
+                                  <input type="date" name="departamento" placeholder="Fecha fin" [(ngModel)]="updVisita.fechaFinSop" required>
+                              </div>
+
+                              <div class="input-field">
+                                  <label>Hora inicio:  </label>
+                                  <input type="time" name="municipio" placeholder="Hora Inicio" [(ngModel)]="updVisita.horaInicioSop" required>
+                              </div>
+
+                              <div class="input-field1">
+                                  <label>Hora Fin:  </label>
+                                  <input type="time" name="direccion" placeholder="Hora Fin" [(ngModel)]="updVisita.horaFinSop" required>
+                              </div>
+                              <div class="input-field">
+                                <label>Solucion:  </label>
+                                <input type="text" name="coordenadas" placeholder="Solucion" [(ngModel)]="updVisita.solucion" required>
+                            </div>
+                            <div class="input-field1">
+                              <label>Estado:  </label>
+                              <select type="selector" name="estado" placeholder="estado" [(ngModel)]="updVisita.estado" required>
+                                <option>Cerrado</option>
+                                <option>Segunda revision</option>
+                                <option>En espera</option>
+                                <option>Reagendar</option>
+                                </select>
+                          </div>
+
+                     </div>
+                  </div>
+                </div>
+              </form>
+          </div>
+            <div class="btn-cerrar">
+                <label for="btn-modal" (click)="updSoporte();">Actualizar</label>
+            </div>
+        </div>
+        <label for="btn-modal" class="cerrar-modal"></label>
+    </div>
+  <!--Fin de Ventana Modal-->
+    <br><br>
+
+</div>
+

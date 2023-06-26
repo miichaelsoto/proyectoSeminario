@@ -1,0 +1,46 @@
+<div class="container">
+  <br><br>
+  <div class="form-control">
+      <br>
+      <input type="submit" routerLink="/nuevo-cliente" value="Ingreso NUEVO cliente">
+      <div class="signup_link">
+
+      </div>
+      <br>
+      <br>
+        <label class="col-sm-2 h4" >Seleccione un cliente: </label>
+        <select id="sel1" type="selector" class="form-select form-control-lg" [(ngModel)]="idClienteSel"(change)="detSoporte()">
+          <option *ngFor="let c of clientes" value="{{c.idCliente}}">{{c.nombre}} - {{c.empresa}}</option>
+        </select>
+        <br>
+    </div>
+    <div>
+      <router-outlet></router-outlet>
+      <br><br>
+      <h2>Soportes del Cliente</h2>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID Soporte</th>
+            <th scope="col">Tipo Soporte</th>
+            <th scope="col">Detalle Soporte</th>
+            <th scope="col">Solución</th>
+            <th scope="col">Estado</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let m of soporte">
+              <td>{{m.idSoporte}}</td>
+              <td>{{m.tipoSoporte}}</td>
+              <td>{{m.detalleSoporte}}</td>
+              <td>{{m.solucion}}</td>
+              <td>{{m.estado}}</td>
+          </tr>
+
+        </tbody>
+      </table>
+      <br><br>
+
+</div>
+
