@@ -12,14 +12,14 @@ export class VerVisitasService {
 
 
     detalleSoporte(idSoporte:number):Observable<any>{
-    let url="http://3.136.18.2:8004/soportes";
+    let url="http://34.125.195.31:8004/soportes";
     let params=new HttpParams();
     params=params.append("idSoporte",idSoporte);
     return this.http.get(url,{"params":params});
   }
 
   updateSoporte(soporte:Soporte):Observable<any>{
-    let url="http://3.136.18.2:8004/updSopVis";
+    let url="http://34.125.195.31:8004/updSopVis";
     return this.http.post(url,soporte);
   }
 }

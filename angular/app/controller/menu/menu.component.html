@@ -17,13 +17,12 @@
       <nav id="sidebar">
         <div class="title">Skynet | Menú</div>
         <ul class="list-items">
-          <li><a type="nav-link" routerLink="/login"><i class="fas fa-user"></i>Acceso</a></li>
-          <li><a routerLink="/registrar"><i class="fas fa-sliders-h"></i>Registrar</a></li>
-          <li><a routerLink="/ver-clientes"><i class="fas fa-address-book"></i>Clientes</a></li>
-          <li><a routerLink="/ver-soportes"href="#" ><i class="fas fa-stream"></i>Soportes</a></li>
-          <li><a routerLink="/ver-visitas" href="#"><i class="fas fa-globe-asia"></i>Visitas</a></li>
-          <li><a href="#"><i class="fas fa-cog"></i>Configuracion</a></li>
-          <li><a href="#"><i class="fas fa-envelope"></i>Contact us</a></li>
+          <li><a type="nav-link" routerLink="/login" *ngIf="enabled1"><i class="fas fa-user"></i>Acceso</a></li>
+          <li><a routerLink="/registrar" *ngIf="enabled1"><i class="fas fa-sliders-h"></i>Registrar</a></li>
+          <li><a routerLink="/ver-clientes" *ngIf="enabled"><i class="fas fa-address-book"></i>Clientes</a></li>
+          <li><a routerLink="/ver-soportes"href="#" *ngIf="enabled"><i class="fas fa-stream"></i>Soportes</a></li>
+          <li><a routerLink="/ver-visitas" href="#"*ngIf="enabled"><i class="fas fa-globe-asia"></i>Visitas</a></li>
+          <li><a href="#" *ngIf="enabled"><i class="fas fa-cog"></i>Reportes</a></li>
 
         </ul>
       </nav>

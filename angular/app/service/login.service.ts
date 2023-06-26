@@ -10,7 +10,7 @@ export class LoginService {
   constructor(private http:HttpClient) { }
 
   login(idUsuario:string, password:string):Observable<any>{
-    let url ="http://3.136.18.2:8002/login";
+    let url ="http://34.125.195.31:8002/login";
     let params= new HttpParams();
     params = params.append("idUsuario", idUsuario);
     params = params.append("pwd", password);

@@ -10,11 +10,11 @@ export class VerClientesService {
   constructor(private http:HttpClient) { }
 
   clientes():Observable<any>{
-    let url="http://3.136.18.2:8001/cliente";
+    let url="http://34.125.195.31:8001/cliente";
     return this.http.get(url)
   }
     detalleSoporte(idCliente:number):Observable<any>{
-    let url="http://3.136.18.2:8001/soportes";
+    let url="http://34.125.195.31:8001/soportes";
     let params=new HttpParams();
     params=params.append("idCliente",idCliente);
     return this.http.get(url,{"params":params});

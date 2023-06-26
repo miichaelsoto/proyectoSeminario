@@ -9,6 +9,7 @@ import { VerVisitasComponent } from './controller/ver-visitas/ver-visitas.compon
 import { NuevoSoporteComponent } from './controller/nuevo-soporte/nuevo-soporte.component';
 import { WindowCliComponent } from './controller/window-cli/window-cli.component';
 import { UpdateVisitasComponent } from './controller/update-visitas/update-visitas.component';
+import { PrincipalComponent } from './controller/principal/principal.component';
 
 const routes: Routes = [
   {path:"login",component:LoginComponent},
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path:"ver-visitas",component:VerVisitasComponent},
   {path:"nuevo-soporte",component:NuevoSoporteComponent},
   {path:"ventana-cli",component:WindowCliComponent},
-  {path:"update-visita",component:UpdateVisitasComponent}
+  {path:"update-visita",component:UpdateVisitasComponent},
+  {path:"principal",component:PrincipalComponent}
 ];
 
 @NgModule({

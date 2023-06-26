@@ -8,5 +8,7 @@ import { Usuario } from 'src/app/model/Usuarios';
 })
 export class MenuComponent {
   enabled:boolean =false;
+  enabled1:boolean =true;
+
   usuario:Usuario;
 }

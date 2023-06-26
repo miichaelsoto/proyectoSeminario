@@ -11,7 +11,7 @@ export class RegistrarService {
   constructor(private http:HttpClient) { }
 
   registrar(usuario:Usuario):Observable<any>{
-    let url="http://3.136.18.2:8002/registrar";
+    let url="http://34.125.195.31:8002/registrar";
     return this.http.post(url,usuario);
   }
 }

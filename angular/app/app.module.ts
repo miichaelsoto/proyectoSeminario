@@ -14,6 +14,7 @@ import { VerVisitasComponent } from './controller/ver-visitas/ver-visitas.compon
 import { NuevoSoporteComponent } from './controller/nuevo-soporte/nuevo-soporte.component';
 import { WindowCliComponent } from './controller/window-cli/window-cli.component';
 import { UpdateVisitasComponent } from './controller/update-visitas/update-visitas.component';
+import { PrincipalComponent } from './controller/principal/principal.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { UpdateVisitasComponent } from './controller/update-visitas/update-visit
     NuevoSoporteComponent,
     WindowCliComponent,
     UpdateVisitasComponent,
+    PrincipalComponent,
 
   ],
   imports: [

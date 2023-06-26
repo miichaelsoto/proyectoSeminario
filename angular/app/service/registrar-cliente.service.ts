@@ -12,12 +12,12 @@ export class RegistrarClienteService {
   constructor(private http:HttpClient) { }
 
   registrar(cliente:Cliente):Observable<any>{
-    let url="http://3.136.18.2:8001/registrarCli";
+    let url="http://34.125.195.31:8001/registrarCli";
     return this.http.post(url,cliente);
   }
 
   registrarUbi(ubicacion:Ubicacion):Observable<any>{
-    let url="http://3.136.18.2:8001/registrarUbi";
+    let url="http://34.125.195.31:8001/registrarUbi";
     return this.http.post(url,ubicacion);
   }
 }
